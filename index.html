@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bank credits</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="container">
-  <header class="container-block__heading">Сравнение банковских кредитов</header>
-  <table class="credit-table">
-    <thead>
-    <tr>
-      <th>Название кредита</th>
-      <th>Ставка (%)</th>
-      <th>Срок (лет)</th>
-      <th class="apply-button">Оформить заявку</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>На потребительские нужды</td>
-      <td>10%</td>
-      <td class="desktop-version">5</td>
-      <td class="mobile-version">5 лет</td>
-      <td><button class="apply-button">Оформить</button></td>
-    </tr>
-    <tr>
-      <td>Зарплатный овердрафт</td>
-      <td>9%</td>
-      <td class="desktop-version">7</td>
-      <td class="mobile-version">7 лет</td>
-      <td><button class="apply-button">Оформить</button></td>
-    </tr>
-    <tr>
-      <td>Альфа Овердрафт</td>
-      <td>8.5%</td>
-      <td class="desktop-version">10</td>
-      <td class="mobile-version">10 лет</td>
-      <td><button class="apply-button">Оформить</button></td>
-    </tr>
-    <tr>
-      <td>Рефинансирование кредитов</td>
-      <td>11%</td>
-      <td class="desktop-version">3</td>
-      <td class="mobile-version">3 года</td>
-      <td><button class="apply-button">Оформить</button></td>
-    </tr>
-    <tr>
-      <td>Энергичный</td>
-      <td>12%</td>
-      <td class="desktop-version">5</td>
-      <td class="mobile-version">5 лет</td>
-      <td><button class="apply-button">Оформить</button></td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank credits</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="container-block__heading">
+        Сравнение банковских кредитов
+      </header>
+      <table class="credit-table">
+        <thead>
+          <tr>
+            <th>Название кредита</th>
+            <th>Ставка (%)</th>
+            <th>Срок (лет)</th>
+            <th class="apply-button">Оформить заявку</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>На потребительские нужды</td>
+            <td>10%</td>
+            <td class="desktop-version">5</td>
+            <td class="mobile-version">5 лет</td>
+            <td><button class="apply-button">Оформить</button></td>
+          </tr>
+          <tr>
+            <td>Зарплатный овердрафт</td>
+            <td>9%</td>
+            <td class="desktop-version">7</td>
+            <td class="mobile-version">7 лет</td>
+            <td><button class="apply-button">Оформить</button></td>
+          </tr>
+          <tr>
+            <td>Альфа Овердрафт</td>
+            <td>8.5%</td>
+            <td class="desktop-version">10</td>
+            <td class="mobile-version">10 лет</td>
+            <td><button class="apply-button">Оформить</button></td>
+          </tr>
+          <tr>
+            <td>Рефинансирование кредитов</td>
+            <td>11%</td>
+            <td class="desktop-version">3</td>
+            <td class="mobile-version">3 года</td>
+            <td><button class="apply-button">Оформить</button></td>
+          </tr>
+          <tr>
+            <td>Энергичный</td>
+            <td>12%</td>
+            <td class="desktop-version">5</td>
+            <td class="mobile-version">5 лет</td>
+            <td><button class="apply-button">Оформить</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-<div id="modal" class="modal hidden-class">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Оформление заявки</h2>
-    <form id="form" class="application-form">
-      <label for="name">Имя:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="phone">Номер телефона:</label>
-      <input type="tel" id="phone" name="phone" required>
-      <br>
-      <button id="form-button" type="submit">Отправить</button>
-    </form>
-  </div>
-</div>
-<script type="module" src="./credits.js"></script>
-</body>
+    <div id="modal" class="modal hidden-class">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Оформление заявки</h2>
+        <form id="form" class="application-form">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <label for="phone">Номер телефона:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <br />
+          <button id="form-button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./credits.js"></script>
+  </body>
 </html>
