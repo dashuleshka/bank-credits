@@ -57,30 +57,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const sendPhpResponse = async () => {
     document
       .getElementById("form")
-      .addEventListener("submit", function (event) {
+      .addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const formData = new FormData(this);
 
-        fetch("apply.php", {
-          method: "POST",
-          body: formData,
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.status === "success") {
-              alert(data.message);
-              console.log(data);
-              modalWindow.classList.add("hidden-class");
-              document.getElementById("form").reset();
-              formButton.disabled = true;
-            } else {
-              alert(data.message);
-            }
-          })
-          .catch((error) => {
-            alert(`Произошла ошибка при отправке данных: ${error.message}`);
+        try {
+          const response = await fetch("apply.php", {
+            method: "POST",
+            body: formData,
           });
+          const data = await response.json();
+          if (data.status === "success") {
+            alert(data.message);
+            console.log(data);
+            modalWindow.classList.add("hidden-class");
+            document.getElementById("form").reset();
+            formButton.disabled = true;
+          }
+          else {
+            alert(data.message);
+          }
+        }
+        catch(error) {
+          alert(`Произошла ошибка при отправке данных: ${error.message}`);
+        }
       });
   };
 
